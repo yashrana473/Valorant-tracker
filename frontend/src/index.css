@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-valRed: #ff4655;
+  --color-valDark: #111111;
+}
+
+body {
+  background-color: var(--color-valDark);
+  color: white;
+}
