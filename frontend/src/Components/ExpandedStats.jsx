@@ -1,14 +1,15 @@
 import React from 'react';
 
 export default function ExpandedStats({ match, myStats, roundsPlayed }) {
-  const { damage_made } = myStats.stats;
   const puuid = myStats.puuid;
-
+  
+  const damage = myStats.damage_made || 0;
   const sortedPlayers = [...match.players.all_players].sort((a, b) => b.stats.score - a.stats.score);
   const placement = sortedPlayers.findIndex(p => p.puuid === puuid) + 1;
   const isMvp = placement === 1;
 
-  const adr = Math.round(damage_made / roundsPlayed);
+  const adr = roundsPlayed > 0 ? Math.round(damage / roundsPlayed) : 0;
+
   let fk = 0;
   let fd = 0;
   let multiKills = 0;
