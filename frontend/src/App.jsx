@@ -71,7 +71,7 @@ function App() {
 
       {profile && mmr && (
         <div className="w-full flex flex-col items-center pb-10 animate-fade-in">
-          <div className="w-full max-w-4xl bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
+          <div className="w-full max-w-2xl bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
             <div className="relative h-32 bg-gray-800">
               <img src={profile.card.wide} alt="Banner" className="w-full h-full object-cover opacity-60" />
               <img src={profile.card.small} alt="Icon" className="absolute -bottom-7.5 left-6 w-20 h-20 border-4 border-gray-900 rounded-lg" />
